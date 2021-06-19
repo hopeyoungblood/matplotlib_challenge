@@ -1,0 +1,66 @@
+
+Dim i as Long
+
+
+
+Loop through all worksheets, we are going to referring to these as ws
+
+summarrow = 2
+totalvolume = 0
+openingprice = ws.Cell(2,3).Value
+closeprice = 0
+yearlychange = 0
+percentchange = 0
+
+lastrow = thesyntax to get last row xlup, lastrow also is Long
+
+
+Loop through all rows (using looping variable i)
+
+  totalvolume = totalvolume + thevalueincolumn7
+
+  if current cell ticker <> next cell ticker Then
+
+    Put current ticker over in our summary table base on summaryrow
+
+    Put total volume over in our summary table based on summaryrow
+
+    Grab the closing price:
+    closinprice = ws.Cells(i,6).Value
+
+    Calculate the yearly change:
+    yearlychange = closingprice - openingprice
+
+    Put yearlychange over in our summary table based on summaryrow
+
+    Based on yearlychange color the cell, use if/else
+
+    Calculate percentchange:
+    if openingprice > 0
+      percentchange = yearlychange / openingprice
+    else
+      percentchange = 0
+    end if
+
+    Put percentchange over in our summary table based on summaryrow
+
+
+
+    openingprice = Cell(i+1,3).Value
+
+    summaryrow = summaryrow + 1
+
+    totalvolume = 0
+
+  End if
+
+
+End loop
+
+End worksheetloop
+
+
+
+
+
+
