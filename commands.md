@@ -25,6 +25,20 @@ git branch -d your_branch_name
 git merge branch_name
 (To merge a branch with another)
 
+## 3 Git commands you need to do every time you want to push your HW to your repository
+(This is after you have already cloned the repository)
+Let's say you have made changes in your cloned HW repository on your machine and you
+are ready to push them up to Github:
+
+cd into your directory where your files are then:
+
+1: 
+git add .
+2:
+git commit -m "type some message"
+3:
+git push
+
 
 # Terminal/Git Bash commands
 
