@@ -115,6 +115,14 @@ exit()
 #### To run a python file called "example.py"
 python example.py
 
+# Jupyter Notebooks
+
+#### To start in either gitbash or mac terminal:
+jupyter notebook
+
+#### If you have problems with changing conda environments and need to change environments in Jupyter:
+
+conda install -c anaconda nb_conda_kernels
 
 # GMaps and US Census installation
 
